@@ -1,13 +1,129 @@
 <script setup> 
-  // import { ref } from 'vue'
+  import { ref } from 'vue'
 
-  // const alternativas = ref([
-  //   {
-  //   id: 1,
-  //   nome: 'Camiseta',
+  const questoes = ref([
+    {
+    id: 1,
+    pergunta: 'BlaBlaBla uno',
+    alternativa1: 'a',
+    alternativa2: 'b',
+    alternativa3: 'c',
+    alternativa4: 'd'
+    },
+    {
+      id: 2,
+    pergunta: 'BlaBlaBla dos',
+    alternativa1: 'a',
+    alternativa2: 'b',
+    alternativa3: 'c',
+    alternativa4: 'd'
+    },
+    {
+      id: 3,
+    pergunta: 'BlaBlaBla tres',
+    alternativa1: 'a',
+    alternativa2: 'b',
+    alternativa3: 'c',
+    alternativa4: 'd'
+    },
+    {
+      id: 4,
+    pergunta: 'BlaBlaBla quatros',
+    alternativa1: 'a',
+    alternativa2: 'b',
+    alternativa3: 'c',
+    alternativa4: 'd'
+    },
+    {
+      id: 5,
+    pergunta: 'BlaBlaBla cincos',
+    alternativa1: 'a',
+    alternativa2: 'b',
+    alternativa3: 'c',
+    alternativa4: 'd'
+    },
+    {
+      id: 6,
+    pergunta: 'BlaBlaBla ses',
+    alternativa1: 'a',
+    alternativa2: 'b',
+    alternativa3: 'c',
+    alternativa4: 'd'
+    },
+    {
+      id: 7,
+    pergunta: 'BlaBlaBla zete',
+    alternativa1: 'a',
+    alternativa2: 'b',
+    alternativa3: 'c',
+    alternativa4: 'd'
+    },
+    {
+      id: 8,
+    pergunta: 'BlaBlaBla oto',
+    alternativa1: 'a',
+    alternativa2: 'b',
+    alternativa3: 'c',
+    alternativa4: 'd'
+    },
+    {
+      id: 9,
+    pergunta: 'BlaBlaBla nueve',
+    alternativa1: 'a',
+    alternativa2: 'b',
+    alternativa3: 'c',
+    alternativa4: 'd'
+    },
+    {
+      id: 10,
+    pergunta: 'BlaBlaBla des',
+    alternativa1: 'a',
+    alternativa2: 'b',
+    alternativa3: 'c',
+    alternativa4: 'd'
+    },
+    {
+      id: 11,
+    pergunta: 'BlaBlaBla onzes',
+    alternativa1: 'a',
+    alternativa2: 'b',
+    alternativa3: 'c',
+    alternativa4: 'd'
+    },
+    {
+      id: 12,
+    pergunta: 'BlaBlaBla dozes',
+    alternativa1: 'a',
+    alternativa2: 'b',
+    alternativa3: 'c',
+    alternativa4: 'd'
+    },
+    {
+      id: 13,
+    pergunta: 'BlaBlaBla trezes',
+    alternativa1: 'a',
+    alternativa2: 'b',
+    alternativa3: 'c',
+    alternativa4: 'd'
+    },
+    {
+      id: 14,
+    pergunta: 'BlaBlaBla quatorzes',
+    alternativa1: 'a',
+    alternativa2: 'b',
+    alternativa3: 'c',
+    alternativa4: 'd'
+    },
+    {
+      id: 15,
+    pergunta: 'BlaBlaBla quinzes',
+    alternativa1: 'a',
+    alternativa2: 'b',
+    alternativa3: 'c',
+    alternativa4: 'd'
+    }
     
-  //   }
-  // ])
+  ])
 </script>
 
 <template>
@@ -15,7 +131,7 @@
   <header class="headermanero">
     <div class="NQuestao">
 
-      <h2 class="numero">1°</h2>
+      <h2 class="numero" v-for="(questao) in questoes" :key="questao.id" >{{  questao.id }}</h2>
       
     </div>
     <div class="materia">
@@ -27,9 +143,9 @@
   <main>
     
     <div class="container">
-      <div class="Questao">
+      <div class="Questao" v-for="(questao) in questoes" :key="questao.id" >
         <div class="pergunta">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quia nesciunt non iusto, dolorum aliquam autem quod ipsa excepturi dolorem modi deleniti officia nam quas illo sequi dicta voluptatibus iste? barigaaaadam Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium ducimus tempore molestias dolorem delectus fugit illum provident illo earum quas, corrupti non tenetur labore in? At saepe possimus inventore sed? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate optio voluptatibus soluta voluptatem pariatur ducimus ipsum modi quam voluptates magni quod nulla perferendis, ut culpa ex, explicabo dolore illo odio.
+          {{ questao.pergunta}} 
         </div>
         
         <div class="img">
