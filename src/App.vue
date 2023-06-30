@@ -1,194 +1,89 @@
-<script setup> 
-  import { ref } from 'vue'
+<script setup>
+import { ref, computed } from 'vue'
+import { getQuestaoPorId } from '@/_data/questoes'
+const currentId = ref(1)
 
-  const questoes = ref([
-    {
-    id: 1,
-    pergunta: 'BlaBlaBla uno',
-    alternativa1: 'a',
-    alternativa2: 'b',
-    alternativa3: 'c',
-    alternativa4: 'd'
-    },
-    {
-      id: 2,
-    pergunta: 'BlaBlaBla dos',
-    alternativa1: 'a',
-    alternativa2: 'b',
-    alternativa3: 'c',
-    alternativa4: 'd'
-    },
-    {
-      id: 3,
-    pergunta: 'BlaBlaBla tres',
-    alternativa1: 'a',
-    alternativa2: 'b',
-    alternativa3: 'c',
-    alternativa4: 'd'
-    },
-    {
-      id: 4,
-    pergunta: 'BlaBlaBla quatros',
-    alternativa1: 'a',
-    alternativa2: 'b',
-    alternativa3: 'c',
-    alternativa4: 'd'
-    },
-    {
-      id: 5,
-    pergunta: 'BlaBlaBla cincos',
-    alternativa1: 'a',
-    alternativa2: 'b',
-    alternativa3: 'c',
-    alternativa4: 'd'
-    },
-    {
-      id: 6,
-    pergunta: 'BlaBlaBla ses',
-    alternativa1: 'a',
-    alternativa2: 'b',
-    alternativa3: 'c',
-    alternativa4: 'd'
-    },
-    {
-      id: 7,
-    pergunta: 'BlaBlaBla zete',
-    alternativa1: 'a',
-    alternativa2: 'b',
-    alternativa3: 'c',
-    alternativa4: 'd'
-    },
-    {
-      id: 8,
-    pergunta: 'BlaBlaBla oto',
-    alternativa1: 'a',
-    alternativa2: 'b',
-    alternativa3: 'c',
-    alternativa4: 'd'
-    },
-    {
-      id: 9,
-    pergunta: 'BlaBlaBla nueve',
-    alternativa1: 'a',
-    alternativa2: 'b',
-    alternativa3: 'c',
-    alternativa4: 'd'
-    },
-    {
-      id: 10,
-    pergunta: 'BlaBlaBla des',
-    alternativa1: 'a',
-    alternativa2: 'b',
-    alternativa3: 'c',
-    alternativa4: 'd'
-    },
-    {
-      id: 11,
-    pergunta: 'BlaBlaBla onzes',
-    alternativa1: 'a',
-    alternativa2: 'b',
-    alternativa3: 'c',
-    alternativa4: 'd'
-    },
-    {
-      id: 12,
-    pergunta: 'BlaBlaBla dozes',
-    alternativa1: 'a',
-    alternativa2: 'b',
-    alternativa3: 'c',
-    alternativa4: 'd'
-    },
-    {
-      id: 13,
-    pergunta: 'BlaBlaBla trezes',
-    alternativa1: 'a',
-    alternativa2: 'b',
-    alternativa3: 'c',
-    alternativa4: 'd'
-    },
-    {
-      id: 14,
-    pergunta: 'BlaBlaBla quatorzes',
-    alternativa1: 'a',
-    alternativa2: 'b',
-    alternativa3: 'c',
-    alternativa4: 'd'
-    },
-    {
-      id: 15,
-    pergunta: 'BlaBlaBla quinzes',
-    alternativa1: 'a',
-    alternativa2: 'b',
-    alternativa3: 'c',
-    alternativa4: 'd'
-    }
-    
-  ])
+const questaoAtual = computed(() => getQuestaoPorId(currentId.value))
 </script>
 
 <template>
-
-  <header class="headermanero">
+  <header class="headerPrincipal">
     <div class="NQuestao">
-
-      <h2 class="numero" v-for="(questao) in questoes" :key="questao.id" >{{  questao.id }}</h2>
-      
+      <h2 class="numero">{{ questaoAtual.id }}</h2>
     </div>
     <div class="materia">
-      <h2 class="fodao">MathQuiz</h2>
+      <h2 class="tituloSite">MathQuiz</h2>
     </div>
   </header>
 
-
   <main>
-    
     <div class="container">
-      <div class="Questao" v-for="(questao) in questoes" :key="questao.id" >
+      <div class="Questao">
         <div class="pergunta">
-          {{ questao.pergunta}} 
+          {{ questaoAtual.pergunta }}
         </div>
-        
-        <div class="img">
-        </div>
+
+        <div class="img"></div>
         <!-- Fim de Questao -->
       </div>
 
       <div class="alternativas">
-
-        <button type="button" class="botaoUm" >1</button>
-        <button type="button" class="botaoDois" >2</button> 
-        <button type="button" class="botaoDois " >3</button>
-        <button type="button" class="botaoUm" >4</button>
-        
+        <button v-for="(alt, i) in questaoAtual.respostas" :key="i" class="botaoUm" type="button" @click="currentId++">
+          {{ alt.texto }}
+        </button>
       </div>
 
       <!-- Fim do container -->
     </div>
-
   </main>
+  <footer class="footerPrincipal">
+    <button @click="currentId--">Prev</button>
+    <!-- Modal -->
+    <button type="button" class="btn buttonModal " data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Dica
+    </button>
+    <!-- <hr> -->    
+  </footer>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Caderno</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fim do Modal -->
 </template>
 
 <style scoped>
-
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
 
-.headermanero {
+.headerPrincipal {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-right: 30px;
 }
 
-.Questao{
+.Questao {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 2%;
 }
-.materia{
+.materia {
   text-align: end;
 }
-.pergunta{
+.pergunta {
   color: rgb(199, 199, 199);
   padding: 20px 20px;
   border: 2px solid gray;
@@ -200,7 +95,7 @@
   text-align: justify;
   margin-right: 25px;
 }
-.NQuestao{
+.NQuestao {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -214,7 +109,7 @@
   height: 50px;
   font-family: 'Comic Neue', cursive;
 }
-.numero{
+.numero {
   margin: 0;
 }
 
@@ -225,16 +120,9 @@
   width: 350px;
   height: 100px;
   margin-bottom: 25px;
+  border-radius: 10px 10px 10px 10px;
 }
-.botaoDois{
-  border: none;
-  color: white;
-  background: rgb(221, 38, 38);
-  width: 350px;
-  height: 100px;
-  margin-bottom: 25px;
-}
-.alternativas{
+.alternativas {
   display: grid;
   align-items: center;
   justify-content: center;
@@ -242,8 +130,22 @@
   margin-top: 10%;
 }
 
-.fodao {
+.tituloSite {
   font-size: 60px;
   font-family: 'Comic Neue', cursive;
+}
+.footerPrincipal {
+  background-color: gray;
+  height: 75px;
+  margin-bottom: 0;
+
+}
+.buttonModal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: red;
+  color: white;
 }
 </style>
