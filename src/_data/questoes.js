@@ -1,81 +1,81 @@
 const questoes = [
   {
     id: 1,
-    pergunta: 'Pergunta 1',
+    pergunta: '<p>Um teleférico foi instalado ligando uma base ao cume de uma montanha. Para a instalação, foram utilizados 1.358 m de cabos, dispostos a uma angulação de 30° em relação ao solo. Qual a altura da montanha?</p> <p>cálculo: sen(30) = altura montanha/comprimento </p>',
     img: '',
     respostas: [
       {
         id: 1.1,
-        texto: 'Opção 1',
+        texto: 'a) 579 m',
         correta: false
       },
       {
         id: 1.2,
-        texto: 'Opção 2',
+        texto: '1.049 m',
         correta: false
       },
       {
         id: 1.3,
-        texto: 'Opção 3',
+        texto: '679 m',
         correta: true
       },
       {
         id: 1.4,
-        texto: 'Opção 4',
+        texto: '480 m',
         correta: false
       }
     ]
   },
   {
     id: 2,
-    pergunta: 'Pergunta 2',
+    pergunta: 'Cosseno é a razão entre o cateto adjacente a um ângulo e a medida da hipotenusa. Sendo  igual a 45°, calcule a medida do cateto adjacente ao ângulo alpha, no triângulo da figura. Considere',
     img: '',
     respostas: [
       {
         id: 2.1,
-        texto: 'Opção da perg 2 1',
-        correta: false
+        texto: '19,74 m',
+        correta: true
       },
       {
         id: 2.2,
-        texto: 'Opção da perg 2 2',
+        texto: '15,19 m',
         correta: false
       },
       {
         id: 2.3,
-        texto: 'Opção da perg 2 3',
-        correta: true
+        texto: '28,03 m',
+        correta: false
       },
       {
         id: 2.4,
-        texto: 'Opção da perg 2 4',
+        texto: '16,34 m',
         correta: false
       }
     ]
   },
   {
     id: 3,
-    pergunta: 'Pergunta 3',
+    pergunta: '<p>Uma pessoa quer conhecer a largura de um rio antes de atravessá-lo. Para isso, ela fixa um ponto de referência na outra margem, como uma árvore, por exemplo (ponto C). Na posição em que se encontra (ponto B), caminhar 10 metros para a esquerda, até que se forme um ângulo de 30° entre o ponto A e o ponto C. Calcule a largura do rio.</p>',
     img: '',
     respostas: [
       {
         id: 3.1,
-        texto: 'Opção da perg 3 1',
-        correta: false
+        texto: '5,76 m',
+        correta: true
       },
       {
         id: 3.2,
-        texto: 'Opção da perg 3 2',
+        texto: '4,82 m',
         correta: false
       },
       {
         id: 3.3,
-        texto: 'Opção da perg 3 3',
-        correta: true
+        texto: '14,14 m',
+        correta: false
       },
       {
         id: 3.4,
-        texto: 'Opção da perg 2 4',
+        texto: '6,21 m',
         correta: false
       }
     ]

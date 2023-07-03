@@ -1,9 +1,12 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { getQuestaoPorId } from '@/_data/questoes'
+import { getDicaOfId } from '@/_data/caderno'
 const currentId = ref(1)
 
 const questaoAtual = computed(() => getQuestaoPorId(currentId.value))
+const dicaAtual = computed (() => getDicaOfId(currentId.value)
+)
 </script>
 
 <template>
@@ -20,7 +23,7 @@ const questaoAtual = computed(() => getQuestaoPorId(currentId.value))
     <div class="container">
       <div class="Questao">
         <div class="pergunta">
-          {{ questaoAtual.pergunta }}
+          <span v-html="questaoAtual.pergunta"></span>
         </div>
 
         <div class="img"></div>
@@ -52,8 +55,8 @@ const questaoAtual = computed(() => getQuestaoPorId(currentId.value))
             <h1 class="modal-title fs-5" id="exampleModalLabel">Caderno</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
-            ...
+          <div class="modal-body ">
+            <span v-html="dicaAtual.dica"></span>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -146,6 +149,11 @@ const questaoAtual = computed(() => getQuestaoPorId(currentId.value))
   align-items: center;
   margin: 0 auto;
   background-color: red;
+  color: white;
+}
+.buttonModal:hover{
+  transition: 0.6s;
+  background-color: rgb(0, 0, 0);
   color: white;
 }
 </style>
