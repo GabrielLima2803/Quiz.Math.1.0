@@ -81,7 +81,7 @@ const dicaAtual = computed (() => getDicaOfId(currentId.value)
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2%;
+  margin-top: 3%;
 }
 .materia {
   text-align: end;
