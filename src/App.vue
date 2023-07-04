@@ -15,7 +15,6 @@ const dicaAtual = computed (() => getDicaOfId(currentId.value)
       <h2 class="numero">{{ questaoAtual.id }}</h2>
     </div>
     <div class="materia">
-      <h2 class="tituloSite">MathQuiz</h2>
     </div>
   </header>
 
@@ -68,7 +67,6 @@ const dicaAtual = computed (() => getDicaOfId(currentId.value)
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
 
 .headerPrincipal {
   display: flex;
@@ -131,11 +129,6 @@ const dicaAtual = computed (() => getDicaOfId(currentId.value)
   justify-content: center;
   grid-template-columns: 375px 375px;
   margin-top: 10%;
-}
-
-.tituloSite {
-  font-size: 60px;
-  font-family: 'Comic Neue', cursive;
 }
 .footerPrincipal {
   background-color: gray;
