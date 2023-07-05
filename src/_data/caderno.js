@@ -4,7 +4,7 @@ const caderno = [{
 },
 {
     id: 2,
-    dica: 'O cosseno é uma das funções trigonométricas que relaciona o ângulo de um triângulo retângulo com a medida de seus lados. Em particular, o cosseno está relacionado ao cateto adjacente e à hipotenusa. Para encontrar o cosseno de um ângulo, é necessário dividir a medida do cateto adjacente pela medida da hipotenusa. Dessa forma, se θ é o ângulo do triângulo, a é a medida do cateto adjacente e h é a medida da hipotenusa, então podemos escrever a fórmula do cosseno como cos(θ) = a/h. Essa relação pode ser muito útil na resolução de problemas envolvendo triângulos retângulos. É importante lembrar que o cosseno é uma função trigonométrica específica para triângulos retângulos e não pode ser aplicado a outros tipos de triângulos. É fundamental entender bem essa relação para ter sucesso em cálculos de trigonometria (SWOKOWSKI, 2011).'
+    dica: '<p> O cosseno é uma das funções trigonométricas que relaciona o ângulo de um triângulo retângulo com a medida de seus lados. Em particular, o cosseno está relacionado ao cateto adjacente e à hipotenusa. Para encontrar o cosseno de um ângulo, é necessário dividir a medida do cateto adjacente pela medida da hipotenusa. Dessa forma, se θ é o ângulo do triângulo, a é a medida do cateto adjacente e h é a medida da hipotenusa, então podemos escrever a fórmula do cosseno como cos(θ) = a/h.</p> <p>Essa relação pode ser muito útil na resolução de problemas envolvendo triângulos retângulos. É importante lembrar que o cosseno é uma função trigonométrica específica para triângulos retângulos e não pode ser aplicado a outros tipos de triângulos. É fundamental entender bem essa relação para ter sucesso em cálculos de trigonometria (SWOKOWSKI, 2011).</p>'
 },
 {
     id: 3,

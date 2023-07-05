@@ -2,11 +2,11 @@ const questoes = [
   {
     id: 1,
     pergunta: '<p>Um teleférico foi instalado ligando uma base ao cume de uma montanha. Para a instalação, foram utilizados 1.358 m de cabos, dispostos a uma angulação de 30° em relação ao solo. Qual a altura da montanha?</p> <p>cálculo: sen(30) = altura montanha/comprimento </p>',
-    img: '',
+    img: 'https://static.todamateria.com.br/upload/im/ag/image-633.jpg?auto_optimize=low',
     respostas: [
       {
         id: 1.1,
-        texto: 'a) 579 m',
+        texto: ' 579 m',
         correta: false
       },
       {
@@ -82,325 +82,325 @@ const questoes = [
   },
   {
     id: 4,
-    pergunta: 'Pergunta 4',
+    pergunta: '<p>Resolva 4x + 8 = 20</p>',
     img: '',
     respostas: [
       {
         id: 4.1,
-        texto: 'Opção da perg 4 1',
+        texto: '10',
         correta: false
       },
       {
         id: 4.2,
-        texto: 'Opção da perg 4 4',
-        correta: true
+        texto: '5',
+        correta: false
       },
       {
         id: 4.3,
-        texto: 'Opção da perg 4 3',
-        correta: true
+        texto: '6',
+        correta: false
       },
       {
         id: 4.4,
-        texto: 'Opção da perg 4 4',
-        correta: false
+        texto: '3',
+        correta: true
       }
     ]
   },
   {
     id: 5,
-    pergunta: 'Pergunta 5',
+    pergunta: '<p>Encontre a função do gráfico</p>',
     img: '',
     respostas: [
       {
         id: 5.1,
-        texto: 'Opção da perg 5 1',
+        texto: ' f(x)=2,05x + 3',
         correta: false
       },
       {
         id: 5.2,
-        texto: 'Opção da perg 5 5',
+        texto: 'f(x)=1,66x + 3',
         correta: true
       },
       {
         id: 5.3,
-        texto: 'Opção da perg 5 3',
-        correta: true
+        texto: 'f(x)=0,50x + 3',
+        correta: false
       },
       {
         id: 5.4,
-        texto: 'Opção da perg 5 4',
+        texto: 'f(x)=1,55x + 3',
         correta: false
       }
     ]
   },
   {
     id: 6,
-    pergunta: 'Pergunta 6',
+    pergunta: '<p>Um motorista de táxi cobra, para cada corrida, uma taxa fixa de R$5,00 e mais R$2,00 por quilômetro rodado.</p> <p> O valor total arrecadado (R) num dia é função da quantidade total (x) de quilômetros percorridos e calculado por meio da função R(x) = ax + b, em que a é o preço cobrado por quilômetro e b, a soma de todas as taxas fixas recebidas no dia.</p> <p> Se, em um dia, o taxista realizou 10 corridas e arrecadou R$ 410,00, então a média de quilômetros rodados por corrida, foi de</p>',
     img: '',
     respostas: [
       {
         id: 6.1,
-        texto: 'Opção da perg 6 1',
+        texto: '20',
         correta: false
       },
       {
         id: 6.2,
-        texto: 'Opção da perg 6 6',
+        texto: '18',
         correta: true
       },
       {
         id: 6.3,
-        texto: 'Opção da perg 6 3',
-        correta: true
+        texto: '9',
+        correta: false
       },
       {
         id: 6.4,
-        texto: 'Opção da perg 6 4',
+        texto: '14',
         correta: false
       }
     ]
   },
   {
     id: 7,
-    pergunta: 'Pergunta 7',
+    pergunta: '<p>1. Calcule o valor de 5x² + 15x = 0 para que f(x) = 0</p>',
     img: '',
     respostas: [
       {
         id: 7.1,
-        texto: 'Opção da perg 7 1',
+        texto: '1 e 4',
         correta: false
       },
       {
         id: 7.2,
-        texto: 'Opção da perg 7 7',
-        correta: true
+        texto: '2 e -2',
+        correta: false
       },
       {
         id: 7.3,
-        texto: 'Opção da perg 7 3',
+        texto: '0 e -3',
         correta: true
       },
       {
         id: 7.4,
-        texto: 'Opção da perg 7 4',
+        texto: '-3 e 0',
         correta: false
       }
     ]
   },
   {
     id: 8,
-    pergunta: 'Pergunta 8',
+    pergunta: '<p>O gráfico a seguir pertence a uma função f(x) do segundo grau, com domínio e contradomínio no conjunto dos números reais. A respeito dessas funções, assinale a alternativa correta</p>',
     img: '',
     respostas: [
       {
         id: 8.1,
-        texto: 'Opção da perg 8 1',
-        correta: false
+        texto: 'O valor do coeficiente “c”, nessa função, é igual a 9',
+        correta: true
       },
       {
         id: 8.2,
-        texto: 'Opção da perg 8 8',
-        correta: true
+        texto: ' Toda função do segundo grau pode ser escrita na forma ax2 + bx + c = 0',
+        correta: false
       },
       {
         id: 8.3,
-        texto: 'Opção da perg 8 3',
-        correta: true
+        texto: 'Não é possível determinar as raízes dessa função unicamente a partir de seu gráfico. Para isso, a lei de formação sempre será necessária',
+        correta: false
       },
       {
         id: 8.4,
-        texto: 'Opção da perg 8 4',
+        texto: ' todas são corretas',
         correta: false
       }
     ]
   },
   {
     id: 9,
-    pergunta: 'Pergunta 9',
+    pergunta: '<p>A função f(x) = x2 + 6x – 36, definida nos números reais, possui ponto de mínimo de coordenadas:</p>',
     img: '',
     respostas: [
       {
         id: 9.1,
-        texto: 'Opção da perg 9 1',
+        texto: ' (3, 45)',
         correta: false
       },
       {
         id: 9.2,
-        texto: 'Opção da perg 9 9',
-        correta: true
+        texto: ' (3, – 45)',
+        correta: false
       },
       {
         id: 9.3,
-        texto: 'Opção da perg 9 3',
-        correta: true
+        texto: ' (0,0) ',
+        correta: false
       },
       {
         id: 9.4,
-        texto: 'Opção da perg 9 4',
-        correta: false
+        texto: '(– 3, 45)',
+        correta: true
       }
     ]
   },
   {
     id: 10,
-    pergunta: 'Pergunta 10',
+    pergunta: '<p>Dada a função f(x) = 2x+3 + 10, o valor de x para que f(x) = 42 é de:</p>',
     img: '',
     respostas: [
       {
         id: 10.1,
-        texto: 'Opção da perg 10 1',
+        texto: '3',
         correta: false
       },
       {
         id: 10.2,
-        texto: 'Opção da perg 10 10',
+        texto: '2',
         correta: true
       },
       {
         id: 10.3,
-        texto: 'Opção da perg 10 3',
-        correta: true
+        texto: '5',
+        correta: false
       },
       {
         id: 10.4,
-        texto: 'Opção da perg 10 4',
+        texto: '1',
         correta: false
       }
     ]
   },
   {
     id: 11,
-    pergunta: 'Pergunta 11',
+    pergunta: '<p>O gráfico, a seguir, é a representação de uma função exponencial:</p> <p>Analisando o gráfico, a lei de formação dessa função exponencial é:</p>',
     img: '',
     respostas: [
       {
         id: 11.1,
-        texto: 'Opção da perg 11 1',
+        texto: 'f(x) = 0,5-x',
         correta: false
       },
       {
         id: 11.2,
-        texto: 'Opção da perg 11 11',
-        correta: true
+        texto: ' f(x) = 0,2x',
+        correta: false
       },
       {
         id: 11.3,
-        texto: 'Opção da perg 11 3',
-        correta: true
+        texto: ' f(x) = -2x',
+        correta: false
       },
       {
         id: 11.4,
-        texto: 'Opção da perg 11 4',
-        correta: false
+        texto: 'f(x) = 0,5x',
+        correta: true
       }
     ]
   },
   {
     id: 12,
-    pergunta: 'Pergunta 12',
+    pergunta: '<p>Dada uma função de R → R com a lei de formação f(x) = ax, em que a é um número positivo diferente de 1, julgue as afirmativas a seguir:</p> <p>I → Essa função será crescente se a for positivo.</p> <p>II → Se x = 0, então, f(x) = 1.</p> <p>III → Essa é uma função exponencial.</p> <p>Marque a alternativa correta:</p>',
     img: '',
     respostas: [
       {
         id: 12.1,
-        texto: 'Opção da perg 12 1',
-        correta: false
+        texto: 'Somente a afirmativa I é falsa',
+        correta: true
       },
       {
         id: 12.2,
-        texto: 'Opção da perg 12 12',
-        correta: true
+        texto: 'Somente a afirmativa II é falsa',
+        correta: false
       },
       {
         id: 12.3,
-        texto: 'Opção da perg 12 3',
-        correta: true
+        texto: 'Todas as afirmativas são verdadeiras',
+        correta: false
       },
       {
         id: 12.4,
-        texto: 'Opção da perg 12 4',
+        texto: 'Somente a afirmativa III é falsa',
         correta: false
       }
     ]
   },
   {
     id: 13,
-    pergunta: 'Pergunta 13',
+    pergunta: '<p>Das figuras geométricas a seguir, marque a alternativa que possui somente figuras planas:</p>',
     img: '',
     respostas: [
       {
         id: 13.1,
-        texto: 'Opção da perg 13 1',
+        texto: 'Cubo, triângulo, pirâmide, circunferência',
         correta: false
       },
       {
         id: 13.2,
-        texto: 'Opção da perg 13 13',
-        correta: true
+        texto: 'Esfera, retângulo, hexágono, prisma',
+        correta: false
       },
       {
         id: 13.3,
-        texto: 'Opção da perg 13 3',
+        texto: 'Pentágono, círculo, quadrilátero, triângulo',
         correta: true
       },
       {
         id: 13.4,
-        texto: 'Opção da perg 13 4',
+        texto: 'Esfera, pentágono, hexágono, triângulo',
         correta: false
       }
     ]
   },
   {
     id: 14,
-    pergunta: 'Pergunta 14',
+    pergunta: '<p>Analise a forma geométrica a seguir, sabendo que a medida dos lados dessa figura foi dada em centímetros.</p> <p>A área desse polígono é igual a:</p>',
     img: '',
     respostas: [
       {
         id: 14.1,
-        texto: 'Opção da perg 14 1',
+        texto: '80 cm²',
         correta: false
       },
       {
         id: 14.2,
-        texto: 'Opção da perg 14 14',
+        texto: ' 96 cm²',
         correta: true
       },
       {
         id: 14.3,
-        texto: 'Opção da perg 14 3',
-        correta: true
+        texto: '144 cm²',
+        correta: false
       },
       {
         id: 14.4,
-        texto: 'Opção da perg 14 4',
+        texto: ' 74 cm²',
         correta: false
       }
     ]
   },
   {
     id: 15,
-    pergunta: 'Pergunta 15',
+    pergunta: '<p>Marcelo comprou um terreno que possui formato de um retângulo, com dimensões de 27 metros de comprimento e 12 metros de largura. Sua irmã Tatiane comprou um terreno com a mesma área, entretanto, com formato quadrado. A medida do lado do terreno da Tatiane é</p>',
     img: '',
     respostas: [
       {
         id: 15.1,
-        texto: 'Opção da perg 15 1',
+        texto: ' 15 metros',
         correta: false
       },
       {
         id: 15.2,
-        texto: 'Opção da perg 15 15',
-        correta: true
+        texto: '17 metros',
+        correta: false
       },
       {
         id: 15.3,
-        texto: 'Opção da perg 15 3',
-        correta: true
+        texto: '19 metros',
+        correta: false
       },
       {
         id: 15.4,
-        texto: 'Opção da perg 15 4',
-        correta: false
+        texto: '18 metros',
+        correta: true
       }
     ]
   }
