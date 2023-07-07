@@ -406,6 +406,11 @@ const questoes = [
   }
 ]
 
+
+// function pontuacaoCentral() {
+  
+// }
+
 function getQuestaoPorId(id) {
     return questoes.find(q => q.id === id)
 }

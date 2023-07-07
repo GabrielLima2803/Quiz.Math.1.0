@@ -1,12 +1,44 @@
 <script setup>
 import { ref, computed } from 'vue'
+import {useToast} from 'vue-toast-notification';
+
 import { getQuestaoPorId } from '@/_data/questoes'
 import { getDicaOfId } from '@/_data/caderno'
-const currentId = ref(1)
 
+const $toast = useToast();
+
+const duration = 2000
+const currentId = ref(1)
 const questaoAtual = computed(() => getQuestaoPorId(currentId.value))
-const dicaAtual = computed (() => getDicaOfId(currentId.value)
-)
+const dicaAtual = computed (() => getDicaOfId(currentId.value))
+const resText = ref('')
+const pontos = ref(0)
+function verificaQuestao(alternativa) {
+  if (alternativa.correta) {
+    pontos.value++
+    $toast.success('Profile saved.', {
+      position: 'top',
+      duration
+    })
+    // instance.dismiss();
+    // $toast.clear();
+  } else {
+    resText.value = "Incorreto"
+  }
+  setTimeout(() => {
+    resText.value = ''
+    currentId.value++
+
+  }, duration)
+}
+
+
+// this.$toast.open({
+//     message: 'Something went wrong!',
+//     type: 'error',
+//     // all of other options may go here
+// });
+
 </script>
 
 <template>
@@ -14,23 +46,28 @@ const dicaAtual = computed (() => getDicaOfId(currentId.value)
     <div class="NQuestao">
       <h2 class="numero">{{ questaoAtual.id }}</h2>
     </div>
+    <div class="NQuestao">
+      <h2 class="numero">{{ pontos }}</h2>
+    </div>
     <div class="materia">
     </div>
   </header>
 
   <main>
+    {{  resText }}
     <div class="container">
       <div class="Questao">
         <div class="pergunta">
           <span v-html="questaoAtual.pergunta"></span>
         </div>
 
+
         <div class="img"></div>
         <!-- Fim de Questao -->
       </div>
 
       <div class="alternativas">
-        <button v-for="(alt, i) in questaoAtual.respostas" :key="i" class="botaoUm" type="button" @click="currentId++">
+        <button v-for="(alt, i) in questaoAtual.respostas" :key="i" class="botaoUm" type="button" @click="verificaQuestao(alt)">
           {{ alt.texto }}
         </button>
       </div>
