@@ -13,24 +13,42 @@ const questaoAtual = computed(() => getQuestaoPorId(currentId.value))
 const dicaAtual = computed (() => getDicaOfId(currentId.value))
 const resText = ref('')
 const pontos = ref(0)
+const correct = ref(false)
+
 function verificaQuestao(alternativa) {
   if (alternativa.correta) {
+    correct.value=true
     pontos.value++
-    $toast.success('Profile saved.', {
+    $toast.success('Correta!', {
       position: 'top',
       duration
     })
     // instance.dismiss();
     // $toast.clear();
   } else {
-    resText.value = "Incorreto"
+    
+     $toast.error('Incorreta!', {
+      position: 'top',
+      duration
+    })
   }
   setTimeout(() => {
     resText.value = ''
     currentId.value++
+    correct.value = false
 
   }, duration)
 }
+
+const testOK = computed(() => {
+  return function (correta) {
+    return (correct.value && correta) ? "testeDois" : ""
+  }
+})
+
+// function travarQuestao(){
+  // 
+// } 
 
 
 // this.$toast.open({
@@ -67,7 +85,7 @@ function verificaQuestao(alternativa) {
       </div>
 
       <div class="alternativas">
-        <button v-for="(alt, i) in questaoAtual.respostas" :key="i" class="botaoUm" type="button" @click="verificaQuestao(alt)">
+        <button v-for="(alt, i) in questaoAtual.respostas" :key="i" class="botaoUm" :class="testOK(alt.correta)" type="button" @click="verificaQuestao(alt)">
           {{ alt.texto }}
         </button>
       </div>
@@ -77,7 +95,8 @@ function verificaQuestao(alternativa) {
   </main>
   <footer class="footerPrincipal">
     <button @click="currentId--">Prev</button>
-    <!-- Modal -->
+    <button @click="currentId++">Prox</button>
+        <!-- Modal -->
     <button type="button" class="btn buttonModal " data-bs-toggle="modal" data-bs-target="#exampleModal">
       Dica
     </button>
@@ -149,6 +168,13 @@ function verificaQuestao(alternativa) {
 }
 .numero {
   margin: 0;
+}
+
+.testeDois {
+  background-color: darkgreen !important;
+}
+.testeDois:hover{
+  transition: 0.5s;
 }
 
 .botaoUm {
